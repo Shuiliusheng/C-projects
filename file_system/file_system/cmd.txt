@@ -1,0 +1,66 @@
+
+cut
+cut_dir
+cut_file
+cut src dst
+
+
+copy
+copy_dir
+copy_file
+copy src dst
+
+
+del
+del_file
+del_dir
+del src
+
+
+find 
+find_dir
+find_file
+find name
+
+
+add_file
+add_file dst src
+
+add_dir
+add_file src
+ 
+add_user 添加用户
+change_user 改变用户属性
+del_user 删除密码
+
+
+dir
+dir 显示当前目录中文件
+
+cd
+cd .. 返回上级
+cd . 返回system目录
+cd name 进入当前目录下的name目录
+cd dirname 进入指定目录
+
+type
+type filename 打印文件内的内容
+
+cls 清屏
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

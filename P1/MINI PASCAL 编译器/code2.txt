@@ -1,0 +1,20 @@
+Program source; 
+Var x,y,z:Integer;
+a:Real;
+Begin 
+	
+	x:=1;
+	y:=1;
+	z:=x*y;
+	a:=x/y;
+	If (a+z)>(x+y)
+	Then
+		Begin
+			While x<=10
+			Do
+				x:=x+1;
+		End;
+	Else
+		y:=0;
+		
+End.

@@ -1,0 +1,42 @@
+Program source; 
+Var x,y,z:Integer;
+a:Real;
+
+function test1(Value: Integer;vae:Real ) : Integer; 
+Var t:Integer;a:Real;
+Begin    
+	Result := Value * 2; 
+	x:=10;
+End;
+
+
+function test (Value: Integer;vae:Real ) : Integer; 
+Var t:Integer;a:Real;
+Begin  
+	t:=1;
+	Result := Value * 4; 
+	y:=t;
+End;
+
+
+Begin 
+	x:=1;
+	y:=1;
+	z:=test1(x,y)*test(x,y);
+	While x>y Do
+	Begin
+		If x>y
+		Then
+		Begin
+			While x>z Do
+			Begin
+				x:=2;
+				break;
+			End;
+		End;
+		break;
+	End;	
+	out z,DEC;
+	out x,DEC;
+	out y,DEC;
+End.

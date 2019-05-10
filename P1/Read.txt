@@ -1,0 +1,5 @@
+run hex 12288
+
+code 12288
+
+decode 12288

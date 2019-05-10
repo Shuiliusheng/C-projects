@@ -1,0 +1,88 @@
+
+ProgDef:     Program Iden ';' SubProg '.'
+
+SubProg:     VarDef Function CompState
+
+Function:    function Iden Function1 Function2;Function
+
+Function1:   (VarDef):type 
+
+Function2:    VarDef CompState
+
+VarDef:	     Var VarDefList ';'
+
+VarDefList:  VarDefState VarDefList1
+VarDefList1: ;VarDefState VarDefList1
+
+VarDefState: VarList':'Type
+
+Type:        Integer  |  Real
+
+VarList:     Variable ',' VarList  |  Variable
+
+StateList:   Statement  StateList ';'|  Statement    
+
+Statement:   AsignState  |  ISE  
+            |  WBD |  CompState
+            | IO |break
+
+IO:         in Variable,Target|out Variable,Target|outs string|outsn string |outb
+string:     (num|char)#
+Target:      DEC|HEX|CHAR|UDEC
+
+CompState:   Begin StateList End
+
+AsignState:  Variable':''='Expr
+
+ISE:         IBT Statement Else Statement 
+
+IBT:         If BoolExpr Then
+
+WBD:         While BoolExpr Do Statement 
+
+BoolExpr:    Expr RelationOp Expr  |  BoolExpr And  |  BoolExpr Or
+          |  Not BoolExpr  |  '(' BoolExpr ')'
+
+Expr :        term { +|- term}
+
+term :       factor { *|/ factor}
+
+factor:      (exp)|Const|Variable|Fuc
+
+Fuc:         Fucname(Variable List)
+
+Variable:    Iden
+
+Const:	     IntNo  |  RealNo
+
+RelationOp:  '<'  |  '>'  |  '=='|'<>'|'>='|'<='
+
+Iden : Char Iden1
+Iden1: Num Iden1|Char Iden1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
